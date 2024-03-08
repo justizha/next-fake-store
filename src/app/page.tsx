@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="relative">
-      <section className="px-8">
+      <section className="px-6">
         <div className="py-32">
           <h1 className="mb-5 text-2xl font-bold  md:text-3xl lg:text-5xl">
             Fake Store
