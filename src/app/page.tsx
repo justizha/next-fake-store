@@ -8,7 +8,7 @@ export default function Home() {
           <h1 className="mb-5 text-2xl font-bold  md:text-3xl lg:text-5xl">
             Fake Store
           </h1>
-          <p className="max-w-lg text-sm tracking-wide md:text-base">
+          <p className="max-w-lg text-base tracking-wide md:text-lg">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
             corporis quos, consectetur nisi mollitia autem, deserunt facere
             deleniti quo harum distinctio numquam temporibus, repudiandae
