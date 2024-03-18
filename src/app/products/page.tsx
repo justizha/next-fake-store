@@ -12,9 +12,13 @@ export default async function Products() {
   const products: any = await getPorduct();
   return (
     <section className="px-4 md:px-8 lg:px-12">
-      {products.map((product: any) => (
-        <div key={product.id}>{product.title}</div>
-      ))}
+      <article className="grid grid-cols-6 gap-6">
+        {products.map((product: any) => (
+          <div key={product.id}>
+            <h2 className="hover: truncate">{product.title}</h2>
+          </div>
+        ))}
+      </article>
     </section>
   );
 }
