@@ -1,4 +1,6 @@
-async function getPorduct() {
+import Link from "next/link";
+
+async function getPorducts() {
   const res = await fetch("https://fakestoreapi.com/products");
 
   if (!res.ok) {
@@ -9,14 +11,14 @@ async function getPorduct() {
 }
 
 export default async function Products() {
-  const products: any = await getPorduct();
+  const products: any = await getPorducts();
   return (
     <section className="px-4 py-20 md:px-8 lg:px-12">
       <article className="grid grid-cols-1 gap-6 md:grid-cols-3 lg:grid-cols-4">
         {products.map((product: any) => (
           <div
             key={product.id}
-            className="flex flex-col justify-between pt-10 border  shadow dark:border-stone-500 rounded"
+            className="flex flex-col justify-between rounded border  pt-10 shadow dark:border-stone-500"
           >
             <div className="flex justify-center">
               <img
@@ -28,6 +30,7 @@ export default async function Products() {
             <div className="border-t px-2 py-1">
               <h2 className="truncate text-lg">{product.title}</h2>
               <p className="text-sm">{product.descr}</p>
+              <Link href={`/products/${product.id}`}>Description</Link>
             </div>
           </div>
         ))}
