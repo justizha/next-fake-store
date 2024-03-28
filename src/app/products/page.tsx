@@ -6,7 +6,6 @@ async function getPorducts() {
   if (!res.ok) {
     throw new Error("failed to fetch");
   }
-
   return res.json();
 }
 
@@ -20,18 +19,19 @@ export default async function Products() {
             key={product.id}
             className="flex flex-col justify-between rounded border  pt-10 shadow dark:border-stone-500"
           >
-            <div className="flex justify-center">
-              <img
-                src={product.image}
-                alt={product.title}
-                className="mb-4 w-52"
-              />
-            </div>
-            <div className="border-t px-2 py-1">
-              <h2 className="truncate text-lg">{product.title}</h2>
-              <p className="text-sm">{product.descr}</p>
-              <Link href={`/products/${product.id}`}>Description</Link>
-            </div>
+            <Link href={`/products/${product.id}`}>
+              <div className="flex justify-center">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="mb-4 w-52"
+                />
+              </div>
+              <div className="border-t px-2 py-1">
+                <h2 className="truncate text-lg">{product.title}</h2>
+                <p className="text-sm">{product.descr}</p>
+              </div>
+            </Link>
           </div>
         ))}
       </article>

@@ -11,8 +11,8 @@ export default function Page({ params }: { params: { id: number } }) {
   return (
     <section>
       <article className="lg:px-20">
-        <div className="">{product.title}</div>
-        <div className="">{product.description}</div>
+        <h2 className="text-2xl font-semibold">{product.title}</h2>
+        <p className="text-base">{product.description}</p>
       </article>
     </section>
   );
