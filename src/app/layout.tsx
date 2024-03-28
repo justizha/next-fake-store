@@ -18,15 +18,17 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning>
       <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          // disableTransitionOnChange
-        >
-          <NavBar />
-          {children}
-        </ThemeProvider>
+        <main>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            // disableTransitionOnChange
+          >
+            <NavBar />
+            {children}
+          </ThemeProvider>
+        </main>
       </body>
     </html>
   );
